@@ -1,0 +1,1 @@
+java -jar ..\target\revolut-test-1-jar-with-dependencies.jar

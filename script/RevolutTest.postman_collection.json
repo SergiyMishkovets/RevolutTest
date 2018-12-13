@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "92ea5e81-3cee-485b-bdf6-cb9b7db03581",
+		"name": "RevolutTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "make-transfer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"accountFrom\": \"11U\",\r\n\"accountTo\": \"22U\",\r\n\"amount\":\"1.3\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/make-transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"make-transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-account-details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"accountFrom\": \"1111\",\r\n\"accountTo\": 222,\r\n\"amount\":10.2\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/account/11U",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"11U"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
